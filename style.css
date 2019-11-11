@@ -1,0 +1,229 @@
+/*-------------------
+  -------------------
+       GENERAL
+  -------------------
+  -------------------*/
+
+body , html{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+a,h1,h2,i{font-family: "Renault Life Light";
+         color: #3f3f3f;
+         text-decoration:none;
+}
+/*-------------------
+  -------------------
+       HEADER
+  -------------------
+  -------------------*/
+/*preHeader*/
+.preHeader{
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+
+
+
+    box-shadow: 0px 2px 5px 0px #ebebeb;
+    -webkit-box-shadow: 0px 2px 5px 0px #ebebeb;
+    -moz-box-shadow: 0px 2px 5px 0px #ebebeb;
+}
+
+
+.preHeader a{
+
+    font-size: 14px;
+    font-weight: 500;
+    padding: 70px;
+    padding-left: 55px;
+     transition-duration: 0.2s;
+
+}
+.preHeader a:hover{
+    color: #3f3f3f;
+}
+.acceuil{ font-weight: 700; font-family: "Renault Life Light"; padding: 9px; color: #3f3f3f; border: 2px solid #3f3f3f; }  .acceuil:hover{ background: #3f3f3f; color: #fff; text-decoration:none ; }  .acceuil i { margin: 0 4px 0 0; }
+.Où nous trouver{font-weight: 700; font-family: "Renault Life Light"; padding:9px; color: #3f3f3f; border: 4px solid #3f3f3f; }  .Où nous trouver:hover{ background: #3f3f3f; color: #fff; text-decoration:none ; }  .Où nous trouver i { margin: 0 6px 0 0; }
+.Contactez-nous{font-weight: 700; font-family: "Renault Life Light"; padding: 9px; color: #3f3f3f; border: 4px solid #3f3f3f; }  .Contactez-nous:hover{ background: #3f3f3f; color: #fff; text-decoration:none ; }  .Contactez-nous i { margin: 0 4px 0 0; }
+.Rendez-vous atelier enligne{font-weight: 700; font-family: "Renault Life Light"; padding: 9px; color: #3f3f3f; border: 2px solid #3f3f3f; }  .Rendez-vous atelier enligne:hover{ background: #3f3f3f; color: #fff; text-decoration:none;}  .Rendez-vous atelier enligne i { margin: 0 4px 0 0; }
+
+.LinkContainer{
+    float: left;
+
+}
+/*header*/
+
+.header{
+    width:80%;
+    margin: 0 auto;
+    line-height: 120px;
+}
+
+/*-------------------
+  -------------------
+       BANNER
+  -------------------
+  -------------------*/
+.Banner{
+   height: 200px;
+   line-height:200px;
+   position: relative;
+}
+.logo{
+      float: right;
+    margin-right:6%;
+      height: 100px;
+      width: 200px;
+}
+.bannerText{
+
+    vertical-align: middle;
+    margin-top:1%;
+    margin-left: 6%;
+}
+/*-------------------
+  -------------------
+       menu-nav
+  -------------------
+  -------------------*/
+/*navigation-bar*/
+#menu-nav {
+    margin: 10px auto;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+
+}
+
+#navigation-bar ul {
+    border-radius: 4px;
+    overflow: hidden;
+}
+#navigation-bar li {
+    float: left;
+    width: 20%;
+}
+#navigation-bar li:hover a::before {
+    right: 0;
+    left: 0;
+}
+#navigation-bar a {
+    color: #3f3f3f;
+    font-size: 18px;
+    margin-right: 6%;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+#navigation-bar a:hover {
+    color: #3f3f3f;
+}
+#navigation-bar a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #fdd700;
+}
+#navigation-bar a:hover::before {
+    right: 0;
+    left: 0;
+}
+
+li {
+    list-style: none;
+}
+/*-------------------
+  -------------------
+       MainBlock
+  -------------------
+  -------------------*/
+/*slider*/
+.slider{
+    margin: 0 auto;
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 20%;
+    background: #ebebeb;
+    border: solid 1px #3f3f3f;
+}
+.slide_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide_img img{
+    width: 100%;
+    height: 100%;
+}
+#i1{
+    display: none;
+}
+#i2{
+    display: none;
+}
+#i3{
+    display: none;
+}
+.pre , .nxt{
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(88,88,88,.4);
+    z-index: 99;
+    cursor: pointer;
+}
+.pre{
+    left: 0;
+}
+.nxt{
+    right: 0;
+}
+.nav{
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+.dots{
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position:relative;
+    border-radius: 50%;
+    display:inline-block;
+    background: rgba(0,0,0,.6);
+}
+.slide_img{
+    z-index: -1;
+}
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three{
+    z-index: 9;
+}
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3{
+    background: white;
+}
+
+/*dropdown-btn*/
+
+
+
+
